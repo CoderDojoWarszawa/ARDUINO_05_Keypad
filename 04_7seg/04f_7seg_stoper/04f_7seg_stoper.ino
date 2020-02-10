@@ -1,0 +1,34 @@
+#include "SevSeg.h"
+#include "TimerOne.h"
+
+//Stwórz instancję wyswietlacz
+SevSeg wyswietlacz;
+
+void setup() {
+  Timer1.initialize(10000); // Ustawienie przerwania czasowego na 10ms
+  Timer1.attachInterrupt(refresh); //Jako kod przerwania wywołaj funkcję refresh
+  //Ustawienie parametrów wyświetlacza i jego inicjacja
+  byte numDigits = 2; //Ile cyfr ma wyświetlacz
+  byte digitPins[] = {10, 11}; //Piny cyfr
+  byte segmentPins[] = {9, 8, 2, 5, 4, 7, 6, 3}; //Piny segmentów {A, B, C, D, E, F, G, P}
+  bool resistorsOnSegments = true; //Czy są rezystory na segmentach
+  byte hardwareConfig = COMMON_CATHODE; // Typ podłączenia
+  wyswietlacz.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments);
+}
+
+void refresh(){
+  wyswietlacz.refreshDisplay();
+}
+
+int liczba=0;
+void loop() {
+  wyswietlacz.setNumber(liczba);
+  delay(1000);
+  liczba++;
+  if (liczba == 100){
+    liczba=0;
+  }
+}
+
+
+
