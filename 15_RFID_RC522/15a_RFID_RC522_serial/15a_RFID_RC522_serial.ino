@@ -31,9 +31,9 @@ void loop() {
   Serial.println("");
 
   // Porównanie UID karty z zapisanym w pamięci
-  if (rfid.uid.uidByte[0] == poprawna_karta[0] ||
-      rfid.uid.uidByte[1] == poprawna_karta[1] ||
-      rfid.uid.uidByte[2] == poprawna_karta[2] ||
+  if (rfid.uid.uidByte[0] == poprawna_karta[0] &&
+      rfid.uid.uidByte[1] == poprawna_karta[1] &&
+      rfid.uid.uidByte[2] == poprawna_karta[2] &&
       rfid.uid.uidByte[3] == poprawna_karta[3] )
   {
     // Poprawna karta
