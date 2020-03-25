@@ -54,3 +54,4 @@ void loop() {
   digitalWrite(6, HIGH); //Czerwone przejscie
   delay(800);
 }
+

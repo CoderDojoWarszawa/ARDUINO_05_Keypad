@@ -44,4 +44,3 @@ void loop() {
     digitalWrite(8, stan_diody);
     } 
 }
-
