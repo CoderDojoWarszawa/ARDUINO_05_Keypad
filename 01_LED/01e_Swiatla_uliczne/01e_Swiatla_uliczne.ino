@@ -45,3 +45,4 @@ void loop() {
   digitalWrite(9, HIGH); //Żółta
   delay(500);
 }
+

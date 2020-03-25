@@ -10,4 +10,3 @@ void loop() {
   Serial.print('L');
   delay(1000);
 }
-

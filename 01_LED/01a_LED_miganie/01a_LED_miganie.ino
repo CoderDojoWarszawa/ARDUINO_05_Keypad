@@ -19,3 +19,4 @@ void loop() {
   digitalWrite(8, LOW); //Wyłączenie diody
   delay(1000); //Odczekanie jednej sekundy
 }
+

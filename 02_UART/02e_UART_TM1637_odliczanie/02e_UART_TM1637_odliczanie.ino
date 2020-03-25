@@ -20,3 +20,4 @@ void loop() {
   licznik = licznik + 1; //Zwiększenie licznika o 1
   delay(10);
 }
+

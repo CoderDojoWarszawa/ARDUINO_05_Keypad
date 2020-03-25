@@ -9,4 +9,3 @@ void loop() {
   Serial.println("Mineła 1 sekunda"); 
 }
 
-
